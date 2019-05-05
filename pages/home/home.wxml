@@ -1,0 +1,111 @@
+<!-- 选项卡-->
+<view class='nav-items'>
+  <view class='nav-item {{current==0?"item-on":""}}' data-current='0' bindtap='click_nav'> 寻人启事 </view>
+  <view class='nav-item {{current==1?"item-on":""}}' data-current='1' bindtap='click_nav'> 寻物启事 </view>
+  <view class='nav-item {{current==2?"item-on":""}}' data-current='2' bindtap='click_nav'> 寻宠启示 </view>
+  <view class='nav-item {{current==3?"item-on":""}}' data-current='3' bindtap='click_nav'> 失物招领 </view>
+</view>
+
+
+<!-- 滑块 -->
+<swiper current='{{current}}' duration="500" circular="true" class='swiper' bindchange="bindchange" style='height:{{windowHeight}}px;'>
+  <swiper-item>
+     <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
+        <view class='pull-class'>
+         <navigator url='/pages/detail/detail?id=123'>
+            <view class='item-list'>
+                <view class='item-pic'>
+                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                </view>
+                <view class='item-desc'>
+                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-type-time'>
+                      <text>手机</text><text>2019-04-26</text>
+                   </view>
+                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-detail'>
+                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
+  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                   </view>
+                </view>
+            </view>
+         </navigator>
+         </view>
+     </scroll-view>
+  </swiper-item>
+
+ <swiper-item>
+     <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
+        <view class='pull-class'>
+         <navigator url='/pages/detail/detail?id=123'>
+            <view class='item-list'>
+                <view class='item-pic'>
+                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                </view>
+                <view class='item-desc'>
+                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-type-time'>
+                      <text>手机</text><text>2019-04-26</text>
+                   </view>
+                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-detail'>
+                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
+  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                   </view>
+                </view>
+            </view>
+         </navigator>
+         </view>
+     </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+     <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
+        <view class='pull-class'>
+         <navigator url='/pages/detail/detail?id=123'>
+            <view class='item-list'>
+                <view class='item-pic'>
+                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                </view>
+                <view class='item-desc'>
+                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-type-time'>
+                      <text>手机</text><text>2019-04-26</text>
+                   </view>
+                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-detail'>
+                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
+  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                   </view>
+                </view>
+            </view>
+         </navigator>
+         </view>
+     </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+     <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
+        <view class='pull-class'>
+         <navigator url='/pages/detail/detail?id=123'>
+            <view class='item-list'>
+                <view class='item-pic'>
+                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                </view>
+                <view class='item-desc'>
+                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-type-time'>
+                      <text>手机</text><text>2019-04-26</text>
+                   </view>
+                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-detail'>
+                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
+  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                   </view>
+                </view>
+            </view>
+         </navigator>
+         </view>
+     </scroll-view>
+  </swiper-item>
+</swiper>

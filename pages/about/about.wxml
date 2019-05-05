@@ -1,0 +1,22 @@
+<!--我的信息-->
+<view class='user'>
+  <view class='user-avater'>
+     <image mode='aspectFill' src='http://localhost:8080/img/about.jpg'></image>
+  </view>
+  <view class='user-info'>
+     <view class='user-name'>{{username}}</view>
+     <view class='user-gender'>{{gender}}</view>
+  </view>
+</view>
+<!--我的启事-->
+<navigator url='/pages/mylist/mylist'>
+<view class='my-list'>
+   <image src='/pages/image/menu.png'></image>
+   <view>我的启事</view>
+</view>
+</navigator>
+<!--联系客服-->
+<button open-type='contact' class='btu-list'>
+   <image src='/pages/image/kefu.png'></image>
+   <view>联系客服</view>
+</button>

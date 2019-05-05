@@ -1,0 +1,116 @@
+.item-list{
+  /* 弹性盒子布局 flex */
+  display: flex;
+  /* 沿着水平轴排列 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 水平排列方式 */
+  justify-content: space-between;
+  /* 垂直居中 */
+  align-items: center;
+  /* 内边距 */
+  padding: 20rpx 10rpx 0 10rpx;
+}
+/* 设置图片样式 */
+.item-pic>image{
+  /* 设置块状元素 */
+  display: block;
+  /* 高度 */
+  height: 230rpx;
+  /* 宽度 */
+  width: 230rpx;
+  /* 圆角 */
+  border-radius: 15rpx;
+}
+/* 列表样式设置 */
+.item-list{
+  /* 弹性盒子布局 flex */
+  display: flex;
+  /* 沿着水平轴排列 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 水平排列方式 */
+  justify-content: space-between;
+  /* 垂直居中 */
+  align-items: center;
+  /* 内边距 */
+  padding: 20rpx 10rpx 0 10rpx;
+}
+/* 设置图片样式 */
+.item-pic>image{
+  /* 设置块状元素 */
+  display: block;
+  /* 高度 */
+  height: 230rpx;
+  /* 宽度 */
+  width: 230rpx;
+  /* 圆角 */
+  border-radius: 15rpx;
+  /*图片宽度*/
+}
+/* 列表描述样式 */
+.item-desc{
+  height: 230rpx;
+  width: 66%;
+  display: flex;
+  /* 按列排序 */
+  flex-direction: column;
+}
+.item-desc>view{
+  padding-top: 15rpx;
+}
+/* 设置标题样式 */
+.item-title{
+  /* 设置文字大小 */
+  font-size: 40rpx;
+  /* 设置文字颜色 */
+  color: #6794FF;
+  /* 标题过长，显示省略号... */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 设置类型和时间样式 */
+.item-type-time{
+  /* flex */
+  display: flex;
+  /* 沿行显示 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 从左边开始显示 */
+  justify-content: flex-start;
+  /* 处置居中 */
+  align-items: center;
+  /* 字体大小 */
+  font-size: 30rpx;
+}
+/* 设置字体颜色 */
+.item-type{
+  color: #8E3BFF;
+  margin-right: 20rpx;
+}
+/* 设置时间颜色 */
+.item-time{
+  color: #ABABAB;
+}
+/* 设置地区样式 */
+.item-ares{
+  /* 字体大小 */
+  font-size: 30rpx;
+  /* 字体颜色 */
+  color: #ABABAB;
+}
+/* 详情样式 */
+.item-detail{
+  /* 字体大小 */
+  font-size: 30rpx;
+  /* 字体颜色 */
+  color: #ABABAB;
+  /* 标题过长，显示省略号... */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

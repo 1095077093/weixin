@@ -1,0 +1,95 @@
+page{
+  background-color:gainsboro;
+}
+/*设置按钮样式*/
+.btn-area{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.btn-area>button{
+  width: 50%;
+}
+.title{
+  background-color: white;
+  height: 60rpx;
+  padding: 10rpx 0;
+  margin-top: 15rpx;
+}
+.item-type{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 3rpx;
+}
+.item-value{
+  padding: 10rpx 0 10rpx 10rpx;
+}
+.item-name{
+  padding: 10rpx 10rpx 10rpx 0;
+  text-align: right;
+}
+.publish{
+  margin-top: 10rpx;
+}
+.text-common{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 3rpx;
+}
+.text-detail{
+  padding: 10rpx 0 10rpx 10rpx;
+}
+.common{
+  margin-bottom: 10rpx;
+}
+.textarea{
+  height: 50rpx;
+}
+.placeholder-title{
+  font-size: 35rpx;
+  padding-left: 10rpx;
+}
+.placeholder-common{
+  font-size: 35rpx;
+  padding-right: 10rpx;
+  text-align: right;
+}
+.add-pic{
+  height: 150rpx;
+  width: 150rpx;
+  background-color:gainsboro;
+  margin: 10rpx 0 10rpx 10rpx;
+  position: relative;
+}
+.pic-h{
+  height: 10rpx;
+  width: 130rpx;
+  background-color: white;
+  position: absolute;
+  top: 70rpx;
+  left: 10rpx;
+  border-radius: 5rpx;
+}
+.pic-s{
+  height: 130rpx;
+  width: 10rpx;
+  background-color: white;
+  position: absolute;
+  top: 10rpx;
+  left: 70rpx;
+  border-radius: 5rpx;
+}
+.pic-show{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pic-show>image{
+  margin-top: 10rpx;
+}

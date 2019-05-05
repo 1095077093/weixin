@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/upload/upload",
+    "pages/about/about",
+    "pages/detail/detail",
+    "pages/mylist/mylist",
+    "pages/mydetail/mydetail",
+    "pages/update/update"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#686868",
+    "navigationBarTitleText": "失物招领",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "启示",
+        "iconPath": "/pages/image/menu_off.png",
+        "selectedIconPath": "/pages/image/menu_on.png"
+      },
+      {
+        "pagePath": "pages/upload/upload",
+        "text": "发布",
+        "iconPath": "/pages/image/fabu_off.png",
+        "selectedIconPath": "/pages/image/fabu_on.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "/pages/image/mine_off.png",
+        "selectedIconPath": "/pages/image/mine_on.png"
+      }
+    ]
+  }
+}

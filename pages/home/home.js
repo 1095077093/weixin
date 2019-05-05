@@ -1,0 +1,88 @@
+// pages/home/home.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    current:0,
+    windowHeight:0
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    var that=this;
+    wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          windowHeight: res.windowHeight-45
+        })
+
+      },
+    })
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  click_nav: function(e){
+    this.setData({
+      current: e.currentTarget.dataset.current
+    })
+
+  },
+  bindchange: function(e){
+    //console.log(e.detail.current)
+    this.setData({
+      current: e.detail.current
+    })
+  }
+})

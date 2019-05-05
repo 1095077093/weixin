@@ -1,0 +1,119 @@
+page{
+  background-color: #ccc;
+}
+/* 标题样式 */
+.title{
+  /* 大小 */
+  font-size: 40rpx;
+  /* 颜色 */
+  color: rgb(30, 172, 228);
+  /* 居中显示 */
+  text-align: center;
+  /* 距顶部高度 */
+  margin-top: 6rpx;
+  /* 背景色 */
+  background-color: #fff;
+  /* 字体 */
+  font-family: '微软雅黑';
+  /* 粗体 */
+  font-weight: bold;
+  /* 内边距 */
+  padding: 10rpx 0;
+}
+.common{
+/* flex */
+  display: flex;
+  /* 沿着水平方向排布 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 水平排列样式 */
+  justify-content: space-between;
+  /* 垂直居中 */
+  align-items: center;
+  /* 背景色 */
+  background-color: #fff;
+  /* 字体大小 */
+  font-size: 35rpx;
+}
+/* 发布者样式 */
+.publish{
+  /* 距离顶端高度 */
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx;
+}
+/* 物品种类 */
+.category{
+  margin-top: 3rpx;
+  padding: 20rpx 20rpx;
+}
+/* 详情图片描述样式 */
+.img-list{
+  /* flex布局 */
+  display: flex;
+  /* 垂直排列 */
+  flex-direction: column;
+  /* 背景色 */
+  background-color: #fff;
+  /* 距离顶部边距 */
+  margin-top: 3rpx;
+}
+/* 图片列表标题 */
+.img-title{
+  padding: 20rpx 0 0 20rpx;
+  /* 字体大小 */
+  font-size: 35rpx;
+
+}
+/* 图片列表样式 */
+.img-desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+/* 设置图片之间的间隔 */
+.img-desc>image{
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  width: 97%;
+}
+/* 详情描述 */
+.item-desc{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 3rpx;
+}
+/* 详情的描述标题 */
+.detail-title{
+  padding: 20rpx 0 0 20rpx;
+  /* 字体大小 */
+  font-size: 35rpx;
+}
+/* 详情内容 */
+.item-detail{
+  font-size: 35rpx;
+  padding: 10rpx 20rpx 50rpx 20rpx;
+  font-family: '微软雅黑'
+}
+/* common-title */
+.common-title{
+  color: rgb(145, 143, 143);
+}
+.operation{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin-top: 1rpx;
+}
+.operation image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.update-delete{
+  padding: 10rpx 0;
+}

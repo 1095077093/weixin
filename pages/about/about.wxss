@@ -1,0 +1,60 @@
+page{
+  background-color:rgba(255, 240, 245, 0.404);
+  margin: 0rpx;
+  padding: 0rpx;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 20rpx 20rpx 0rpx 20rpx;
+  background-color: white;
+}
+.user-avater>image{
+  height: 210rpx;
+  width: 210rpx;
+  border-radius: 20rpx;
+}
+.user-info{
+  display: flex;
+  flex-direction: column;
+}
+.user-info>view{
+  margin: 30rpx;
+}
+.user-name{
+  font-weight: bolder;
+}
+.user-gender{
+  color: grey;
+}
+
+.my-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  margin-top: 20rpx
+}
+.my-list>image{
+  width: 70rpx;
+  height: 70rpx;
+  padding: 20rpx;
+}
+.btu-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  margin-top: 10rpx
+}
+.btu-list>image{
+  width: 70rpx;
+  height: 70rpx;
+  padding: 0rpx 20rpx 10rpx 0rpx;
+}
