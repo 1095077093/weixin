@@ -6,7 +6,8 @@
     "pages/detail/detail",
     "pages/mylist/mylist",
     "pages/mydetail/mydetail",
-    "pages/update/update"
+    "pages/update/update",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,4 +1,5 @@
 // pages/upload/upload.js
+const app=getApp();
 Page({
 
   /**
@@ -10,6 +11,7 @@ Page({
     customItem: '全部',
     region: ['广东省', '广州市', '海珠区'],
     imgs:[],
+    imgList:[],
     array: [{ "id": 10, "name": "寻物启事" }, { "id": 11, "name": "寻宠启事" }]
   },
 
@@ -17,6 +19,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
+    wx.request({
+      url: 'http://localhost:8080//getItemType',
+      success(res){
+        console.log(res.data)
+        that.setData({
+          array: res.data
+        })
+      }
+    })
 
   },
 
@@ -69,7 +81,48 @@ Page({
 
   },
   formSubmit:function(e){
-    console.log("提交")
+    var that =this;
+    console.log("提交");
+    //console.log(e);
+    var title = e.detail.value.title;
+    //console.log(title);
+    var typeIndex = e.detail.value.typeIndex;
+    var array=that.data.array;
+    var typeId=array[typeIndex].typeId;
+    //console.log(typeId);
+    var category = e.detail.value.category;
+    //console.log(category);
+    var openId = app.globalData.userInfo.openId;
+    //console.log(openId);
+    var lostTime = e.detail.value.lostTime;
+    //console.log(lostTime);
+    var region = e.detail.value.region;
+    //console.log(region);
+    var address = e.detail.value.address;
+    //console.log(address);
+    var lostDetail = e.detail.value.lostDetail;
+    //console.log(lostDetail);
+    var imgs=that.data.imgList;
+
+    wx.request({
+      url: 'http://localhost:8080//addItem',
+      data:{
+        itemTitle: title,
+        typeId: typeId,
+        category: category,
+        openId: openId,
+        lostTime: lostTime,
+        region: region,
+        address: address,
+        lostDetail: lostDetail,
+        imgs: imgs
+      },
+      method:'post',
+      success(res){
+        console.log(res)
+      }
+    })
+
   },
   /**重置 */
   formReset: function (e) {
@@ -79,6 +132,7 @@ Page({
       date: "2019-01-01",
       region: ['广东省', '广州市', '海珠区'],
       tempFilePaths: [],
+
     })
 
   },
@@ -106,10 +160,29 @@ Page({
       count: 3,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
-      success: function(res) {
-        //console.log(res)
+      success(res) {
+        console.log(res);
         that.setData({
-          imgs: res.tempFilePaths
+           imgs: res.tempFilePaths
+        })
+        var imgList=[];
+        for(var i=0;i<res.tempFilePaths.length;i++){
+          //console.log(res.tempFilePaths[i]);
+
+          wx.uploadFile({
+            url: 'http://localhost:8080//imageUpload',
+            filePath:res.tempFilePaths[i],
+            name: 'file',
+            success(res){
+              console.log(res);
+              imgList.push(res.data);
+            }
+          })
+        }
+
+        //console.log(imgList);
+        that.setData({
+          imgList: imgList
         })
       },
     })

@@ -1,53 +1,53 @@
 <!--标题-->
 <view class='title'>
-  哈学院2教丢失手机一部哈学院2教丢失手机一部
+  {{item.itemTitle}}
 </view>
 <!--发布者-->
 <view class='common publish'>
    <view class='common-title'>发布者:</view>
-   <view>王哈哈</view>
+   <view>{{item.user.userName}}</view>
 </view>
 <!--物品种类-->
 <view class='common category'>
   <view class='common-title'>物品种类:</view>
-  <view>手机</view>
+  <view>{{item.category}}</view>
 </view>
 <!--失物地点-->
 <view class='common category'>
   <view class='common-title'>失物地点：</view>
-  <view>哈尔滨南岗区</view>
+  <view>{{item.region}}</view>
 </view>
 <!--详细地址-->
 <view class='common category'>
   <view class='common-title'>详细地址</view>
-  <view>中兴大道109号</view>
+  <view>{{item.address}}</view>
 </view>
 <!-- 遗失时间 -->
 <view class='common category'>
   <view class='common-title'>遗失时间:</view>
-  <view>2019年4月28号 下午5点左右</view>
+  <view>{{item.lostTime}}</view>
 </view>
 <view class='img-list'>
   <view class='common-title img-title'>图片:</view>
   <view class='img-desc'>
-    <image src='http://localhost:8080/img/iphone.jpg' mode="aspectFill"></image>
-    <image src='http://localhost:8080/img/iphone.jpg' mode="aspectFill"></image>
-    <image src='http://localhost:8080/img/iphone.jpg' mode="aspectFill"></image>
+  <block wx:for="{{item.imgs}}" wx:key='' wx:for-index="idx">
+         <image src='{{item}}' mode="aspectFill"></image>
+  </block>
   </view>
 </view>
 <!-- 详细描述 -->
 <view class='item-desc'>
   <view class='common-title detail-title'>描述:</view>
   <view class='item-detail'>
-    自民党此次党代会主题为“国家与人民一起成长”，会上除主席换届选举外，还为即将举行的欧洲议会选举进行动员。会场布置让人耳目一新，场内有赞助商华为的广告牌，主席台电子屏幕背景上还打出4个中文大字：“经济政策”。林德纳演讲的开场白更是令全场震惊，他用生硬的中文说：“社会与经济在不断变化，我们要与时俱进。”林德纳在用德语解释这句话的意思后表示：“按照当前形势，我们的孩子今后除了要学英文，还必须学中文”。他直言已开始学中文，但中文确实很难
+    {{item.lostDetail}}
   </view>
 </view>
 
 <view class='operation'>
-   <view class='update-delete' bindtap='updateItem'>
+   <view class='update-delete'data-item-id='{{item.itemId}}' bindtap='updateItem'>
       <image src='/pages/image/update.png'></image>
    </view>
-    <view class='update-delete' data-item-id='123' bindtap='deleteItem'>
+    <view class='update-delete' data-item-id='{{item.itemId}}' bindtap='deleteItem'>
       <image src='/pages/image/delete.png'></image>
    </view>
 </view>

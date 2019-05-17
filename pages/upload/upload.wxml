@@ -1,36 +1,36 @@
 
-<form bindsubmit="formSubmit" bindreset="formReset">
+<form bindsubmit="formSubmit">
   <!--标题-->
-  <input name="title" class='title' placeholder='请输入标题' placeholder-class='placeholder-title'></input>
+  <input name="title" class='title' placeholder='请输入标题' placeholder-class='placeholder-title' value='{{itemTitle}}'></input>
   <!--普通选择器-->
-  <picker mode="selector" range='{{array}}' range-key='name' bindchange="bindchangetype">
+  <picker mode="selector" range='{{array}}' range-key='typeName' bindchange="bindchangetype" value='{{index}}' name='typeIndex'>
      <!--启事类型-->
   <view class='item-type'>
      <view class='item-value'>启事类型</view>
-     <view class='item-name'>{{array[index].name}}</view>
+     <view class='item-name' >{{array[index].typeName}}</view>
   </view>
   </picker>
 
   <!--物品种类-->
   <view class='item-type'>
-     <view class='item-value'>物品种类</view><input class='item-name' placeholder='手机' placeholder-class='placeholder-common'></input>
+     <view class='item-value'>物品种类</view><input name='category' class='item-name' placeholder-class='placeholder-common' value='{{category}}'></input>
   </view>
   <!--发布人-->
-  <view class='item-type publish'>
-     <view class='item-value'>发布人</view><input class='item-name' placeholder='王哈哈' placeholder-class='placeholder-common'></input>
-  </view>
+  <!--<view class='item-type publish'>
+     <view class='item-value'>发布人</view><input class='item-name'  placeholder-class='placeholder-common' value='{{item.user.userName}}'></input>
+  </view>-->
 
    <!--时间选择器-->
-  <picker mode="date" start="1970-01-01" end="2020-12-30" fields="day" bindchange="bindchangetime">
+  <picker mode="date" start="1970-01-01" end="2020-12-30" fields="day" bindchange="bindchangetime" name='lostTime' value='{{lostTime}}'>
      <!--遗失时间-->
   <view class='item-type'>
      <view class='item-value'>遗失时间</view>
-     <view class='item-name'>{{date}}</view>
+     <view class='item-name'>{{lostTime}}</view>
   </view>
   </picker>
 
   <!--地点选择器-->
-  <picker mode="region" value='{{region}}' custom-item="{{customItem}}" bindchange="bindchangeregion">
+  <picker mode="region" value='{{region}}' custom-item="{{customItem}}" bindchange="bindchangeregion" name='region' value='{{region}}'>
      <!--选择地区-->
   <view class='item-type publish'>
      <view class='item-value'>选择地区</view>
@@ -40,12 +40,12 @@
   <!--具体地点-->
   <view class='text-common common'>
      <view class='text-detail'>具体地点</view>
-     <textarea class='textarea' placeholder='具体地点 如 火车站，汽车站' placeholder-class='placeholder-common' maxlength="-1" auto-height="true" ></textarea>
+     <textarea class='textarea' value='{{address}}' name='address' placeholder-class='placeholder-common' maxlength="-1" auto-height="true" ></textarea>
   </view>
   <!--失物详情-->
   <view class='text-common'>
      <view class='text-detail'>失物详情</view>
-     <textarea class='textarea' placeholder='请输入详细信息' placeholder-class='placeholder-common' maxlength="-1" auto-height="true"></textarea>
+     <textarea class='textarea' value='{{lostDetail}}' name='lostDetail' placeholder-class='placeholder-common' maxlength="-1" auto-height="true"></textarea>
   </view>
   <!--添加图片-->
   <view class='text-common common'>
@@ -55,7 +55,7 @@
         <view class='pic-s'></view>
         <view></view>
      </view>
-     <view class='pic-show' wx:if="{{imgs!=null && imgs.length>0}}">
+      <view class='pic-show' wx:if="{{imgs!=null && imgs.length>0}}">
        <block wx:for="{{imgs}}" wx:key='' wx:for-index="idx" wx:for-item="image">
           <image bindlongpress="deleteImage" data-id='{{idx}}' mode='aspectFill' src='{{image}}'></image>
        </block>
@@ -63,9 +63,7 @@
   </view>
   <!--按钮-->
   <view class="btn-area">
-    <button form-type="submit">提交</button>
-    <button form-type="reset">重置</button>
+    <button form-type="submit" catchtap='updateItem'>更新</button>
   </view>
 
-  
-</form>
+</form> 

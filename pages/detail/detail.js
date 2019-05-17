@@ -5,6 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
+    item:{
+    "itemId": 1,
+    "itemTitle": "fff",
+    "user": {
+      "userId": 1000,
+      "userName": "wanghaha"
+    },
+    "category": "ffff",
+    "itemType": {
+      "typeId": 1000,
+      "typeName": "寻人启事"
+    },
+    "region": "ffff",
+    "address": "ffff",
+    "lostTime": 1557197544000,
+    "imgs": [
+      "http://localhost:8888/img/img_1.jpg"
+    ],
+    "lostDetail": "ffff"
+  }
 
   },
 
@@ -12,7 +32,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    var that=this;
+    console.log(options.itemId);
+    wx.request({
+      url: 'http://localhost:8080//getItemByItemId',
+      data: {
+        itemId: options.itemId
+      },
+      success(res){
+        console.log(res.data)
+        that.setData({
+          item:res.data
+        })
+      }
+    })
 
   },
 

@@ -12,6 +12,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this
+     console.log(options.itemId);
+    wx.request({
+      url: 'http://localhost:8080//getItemByItemId',
+      data:{
+        itemId: options.itemId
+      },
+      success(res){
+        that.setData({
+          item: res.data
+        })
+      }
+    })
 
   },
 
@@ -64,12 +77,18 @@ Page({
 
   },
   deleteItem:function(e){
-    console.log(ecurrentTarget.dataset.itemId)
+    console.log(e.currentTarget.dataset.itemId)
     wx.showModal({
       title: '删除我的启事',
       content: '是否删除',
       success(res) {
         if (res.confirm) {
+          wx.request({
+            url: 'http://localhost:8080//deleteItemByItemId',
+            data:{
+              itemId: e.currentTarget.dataset.itemId
+            }
+          })
          wx.switchTab({
            url: '/pages/about/about',
          })

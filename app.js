@@ -10,6 +10,25 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        var that=this;
+        console.log(res.code);
+        wx.request({
+          url: 'http://localhost:8080//login',
+          method:'get',
+          data:{
+            code: res.code
+          },
+          success(e){
+            console.log(e.data.userId);
+            if (e.data.userId==null){
+              that.globalData.userInfo.openId = e.data.openId;
+              wx.reLaunch({
+                url: '/pages/login/login',
+              })
+            }
+            
+          }
+        })
       }
     })
     // 获取用户信息
@@ -35,6 +54,7 @@ App({
   },
   globalData: {
     userInfo: {
+      openId:101,
       username:'吴哈哈',
       gender:'女'
     }

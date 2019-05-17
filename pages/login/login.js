@@ -1,4 +1,5 @@
-// pages/mylist/mylist.js
+// pages/login/login.js
+const app=getApp();
 Page({
 
   /**
@@ -12,20 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that=this;
-     console.log(options.userId);
-     wx.request({
-       url: 'http://localhost:8080//getItemListByUserId',
-       data:{
-         userId: options.userId
-       },
-       success(res){
-         console.log(res);
-         that.setData({
-           items:res.data
-         })
-       }
-     })
+
   },
 
   /**
@@ -74,6 +62,42 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+
+  },
+  bindgetuserinfo:function(e){
+    console.log(e);
+    var userName = e.detail.userInfo.nickName;
+    var openId = app.globalData.userInfo.openId;
+    console.log(openId);
+     
+    if (e.detail.errMsg =="getUserInfo:ok"){
+
+        wx.request({
+          url: 'http://localhost:8080//addUser',
+          method: 'GET',
+          data: {
+            userName: userName,
+            openId: openId
+          },
+          success(res) {
+            console.log(res);
+            if (res.data == "ok") {
+              wx.switchTab({
+                url: '/pages/home/home',
+              })
+            } else {
+              wx.showToast({
+                title: '授权失败',
+              })
+            }
+
+          }
+        })
+
+      }
+       
+      
+      
 
   }
 })

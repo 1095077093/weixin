@@ -1,7 +1,7 @@
 <!--我的信息-->
 <view class='user'>
   <view class='user-avater'>
-     <image mode='aspectFill' src='http://localhost:8080/img/about.jpg'></image>
+     <image mode='aspectFill' src='http://localhost:8888/img/about.jpg'></image>
   </view>
   <view class='user-info'>
      <view class='user-name'>{{username}}</view>
@@ -9,7 +9,7 @@
   </view>
 </view>
 <!--我的启事-->
-<navigator url='/pages/mylist/mylist'>
+<navigator url='/pages/mylist/mylist?userId={{userId}}'>
 <view class='my-list'>
    <image src='/pages/image/menu.png'></image>
    <view>我的启事</view>

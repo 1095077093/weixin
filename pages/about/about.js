@@ -7,13 +7,29 @@ Page({
    */
   data: {
     username: app.globalData.userInfo.username,
-    gender: app.globalData.userInfo.gender
+    gender: app.globalData.userInfo.gender,
+    userId:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   var that=this;
+   var openId= app.globalData.userInfo.openId;
+   console.log(openId)
+   wx.request({
+     url: 'http://localhost:8080//getUserByOpenId',
+     data:{
+       openId: openId
+     },
+     success(res){
+       console.log(res.data.userId)
+       that.setData({
+         userId: res.data.userId
+       })
+     }
+   })
 
   },
 
@@ -28,6 +44,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
 
   },
 

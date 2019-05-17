@@ -1,0 +1,5 @@
+<image class='logo' mode='aspectFit' src='/pages/image/img_2.jpg'></image>
+<view class='title'>
+  欢迎来到失物招领系统
+</view>
+<button class='btn' open-type='getUserInfo' bindgetuserinfo='bindgetuserinfo'>授权</button>

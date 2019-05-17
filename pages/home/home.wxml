@@ -12,24 +12,25 @@
   <swiper-item>
      <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
         <view class='pull-class'>
-         <navigator url='/pages/detail/detail?id=123'>
+        <block wx:for="{{page.items}}" wx:key=''>
+         <navigator url='/pages/detail/detail?itemId={{item.itemId}}'>
             <view class='item-list'>
                 <view class='item-pic'>
-                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                   <image mode='aspectFill' src='{{item.imgs}}'></image>
                 </view>
                 <view class='item-desc'>
-                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-title'>{{item.itemTitle}}</view>
                    <view class='item-type-time'>
-                      <text>手机</text><text>2019-04-26</text>
+                      <text>{{item.category}}:</text><text>{{item.lostTime}}</text>
                    </view>
-                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-ares'>地区: {{item.region}}</view>
                    <view class='item-detail'>
-                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
-  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                       详情: {{item.lostDetail}}
                    </view>
                 </view>
             </view>
          </navigator>
+        </block>
          </view>
      </scroll-view>
   </swiper-item>
@@ -37,24 +38,25 @@
  <swiper-item>
      <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
         <view class='pull-class'>
-         <navigator url='/pages/detail/detail?id=123'>
+        <block wx:for="{{page.items}}" wx:key=''>
+         <navigator url='/pages/detail/detail?itemId={{item.itemId}}'>
             <view class='item-list'>
                 <view class='item-pic'>
-                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                   <image mode='aspectFill' src='{{item.imgs}}'></image>
                 </view>
                 <view class='item-desc'>
-                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-title'>{{item.itemTitle}}</view>
                    <view class='item-type-time'>
-                      <text>手机</text><text>2019-04-26</text>
+                      <text>手机:</text><text>{{item.lostTime}}</text>
                    </view>
-                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-ares'>地区: {{item.region}}</view>
                    <view class='item-detail'>
-                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
-  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                       详情: {{item.lostDetail}}
                    </view>
                 </view>
             </view>
          </navigator>
+        </block>
          </view>
      </scroll-view>
   </swiper-item>
@@ -62,24 +64,25 @@
   <swiper-item>
      <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
         <view class='pull-class'>
-         <navigator url='/pages/detail/detail?id=123'>
+        <block wx:for="{{page.items}}" wx:key=''>
+         <navigator url='/pages/detail/detail?itemId={{item.itemId}}'>
             <view class='item-list'>
                 <view class='item-pic'>
-                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                   <image mode='aspectFill' src='{{item.imgs}}'></image>
                 </view>
                 <view class='item-desc'>
-                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-title'>{{item.itemTitle}}</view>
                    <view class='item-type-time'>
-                      <text>手机</text><text>2019-04-26</text>
+                      <text>手机:</text><text>{{item.lostTime}}</text>
                    </view>
-                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-ares'>地区: {{item.region}}</view>
                    <view class='item-detail'>
-                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
-  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                       详情: {{item.lostDetail}}
                    </view>
                 </view>
             </view>
          </navigator>
+        </block>
          </view>
      </scroll-view>
   </swiper-item>
@@ -87,24 +90,25 @@
   <swiper-item>
      <scroll-view scroll-y="true" style='height:{{windowHeight}}px;'>
         <view class='pull-class'>
-         <navigator url='/pages/detail/detail?id=123'>
+        <block wx:for="{{page.items}}" wx:key=''>
+         <navigator url='/pages/detail/detail?itemId={{item.itemId}}'>
             <view class='item-list'>
                 <view class='item-pic'>
-                   <image mode='aspectFill' src='http://localhost:8080/img/iphone.jpg'></image>
+                   <image mode='aspectFill' src='{{item.imgs}}'></image>
                 </view>
                 <view class='item-desc'>
-                   <view class='item-title'>哈学院2教丢失手机一部哈学院2教丢失手机一部</view>
+                   <view class='item-title'>{{item.itemTitle}}</view>
                    <view class='item-type-time'>
-                      <text>手机</text><text>2019-04-26</text>
+                      <text>手机:</text><text>{{item.lostTime}}</text>
                    </view>
-                   <view class='item-ares'>地区: 哈尔滨-南岗区</view>
+                   <view class='item-ares'>地区: {{item.region}}</view>
                    <view class='item-detail'>
-                       详情: 今天在哈学院二号楼2610教室丢失黑色华为Mate10000手机一部，
-  希望希望拾到的朋友归还，必有重谢，联系方式 QQ：1611756908 邮箱: 1611756908@163.com
+                       详情: {{item.lostDetail}}
                    </view>
                 </view>
             </view>
          </navigator>
+        </block>
          </view>
      </scroll-view>
   </swiper-item>
